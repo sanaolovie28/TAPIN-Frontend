@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAPIN</title>
+  <link rel="stylesheet" href="design.css" />
+</head>
+<body>
+  
+    <section id="student" class="student-page page-section">
+      <header class="top-header">
+        <div id="realtime-clock" class="realtime-clock"></div>
+      </header>
+      <div class="student-top">
+        <div class="tapin-logo large"><img src="TAPIN Logo.png" style="height: 200px; width: auto; margin-top:10px;" alt="TAPIN Logo" class="tapin-logo-img" /></div>
+        <h1 style="font-size: 20px;">WELCOME TO PASIG KNOWLEDGE CENTER</h1>
+      </div>
+      <div class="student-layout">
+        <div class="tap-card-wrapper">
+          <div class="tap-card">
+            <div class="tap-result-denied">DENIED</div>
+            <div class="tap-reason">REASON</div>
+          </div>
+          <p class="tap-instruction">Please tap your ID</p>
+        </div>
+
+        <div class="student-details">
+          <div class="role-pill">STUDENT / VISITOR</div>
+          
+          <div class="input-group">
+            <label for="student-name">NAME</label>
+            <input id="student-name" />
+          </div>
+
+          <div class="time-grid">
+            <div class="input-group">
+              <label for="time-in">TIME IN</label>
+              <input id="time-in" />
+            </div>
+            <div class="input-group">
+              <label for="time-out">TIME OUT</label>
+              <input id="time-out" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <script>
+  function updateClock() {
+    const now = new Date();
+    
+    const timeString = now.toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
+
+    document.getElementById('realtime-clock').textContent = timeString;
+  }
+
+  updateClock();
+
+  setInterval(updateClock, 1000);
+</script>
+</body>
+</html>

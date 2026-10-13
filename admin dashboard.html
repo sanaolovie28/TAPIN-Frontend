@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAPIN</title>
+  <link rel="stylesheet" href="design.css" />
+</head>
+<body>
+  <section class="page-section">
+    <header class="admin-header">
+      <aside><img src="TAPIN Logo.png" style="height:100px; position:relative; margin-left: 10px;" alt="TAPIN Logo" class="tapin-logo-img" /></aside>
+        
+      <div class="theme-controls">
+        <button id="lightMode" class="theme-btn active">☼</button>
+        <button id="darkMode" class="theme-btn">☾</button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <button class="hamburger-tab" aria-label="Toggle menu">
+        <span class="hamburger">
+          <i></i><i></i><i></i>
+        </span>
+      </button>
+      
+      <nav class="side-nav">
+      <a class="side-link active" href="admin dashboard.html">
+        <span class="ico">▦</span>
+        <span class="link-text">Dashboard</span>
+      </a>
+      <a class="side-link" href="attendance.html">
+        <span class="ico">▤</span>
+        <span class="link-text">Attendance Logs</span>
+      </a>
+      <a class="side-link" href="studentrecords.html">
+        <span class="ico">▣</span>
+        <span class="link-text">Student Records</span>
+      </a>
+      <a class="side-link" href="visitorrecords.html">
+        <span class="ico">▧</span>
+        <span class="link-text">Visitor Records</span>
+      </a>
+      <a class="side-link" href="account.html">
+        <span class="ico">♙</span>
+        <span class="link-text">Account</span>
+      </a>
+      <a class="side-link" href="register.html">
+        <span class="ico">＋</span>
+        <span class="link-text">Register</span>
+      </a>
+      <a class="side-link" href="report.html">
+        <span class="ico">▥</span>
+        <span class="link-text">Report</span>
+      </a>
+      <a class="side-link" href="auditlogs.html">
+        <span class="ico">☷</span>
+        <span class="link-text">Audit Logs</span>
+      </a>
+      <a class="side-link side-logout" href="login.html">
+        <span class="ico">⇥</span>
+        <span class="link-text">Log out</span>
+      </a>
+      </nav>
+    </aside>
+  
+    <main class="dashboard-content">
+      <!-- Header Title -->
+      <div class="dash-header">
+        <h1>Welcome, Admin!</h1>
+        <p>Administrator Dashboard</p>
+      </div>
+
+      <div class="dash-grid">
+        
+        <div class="stats-container">
+          
+          <div class="stats-top-row">
+            <div class="card card-large">
+              <span class="card-num">100</span>
+              <span class="card-label">CURRENTLY INSIDE</span>
+            </div>
+
+            <div class="card-stack">
+              <div class="card card-mini">
+                <span class="card-num">100</span>
+                <span class="card-label">TAPS IN</span>
+              </div>
+              <div class="card card-mini">
+                <span class="card-num">100</span>
+                <span class="card-label">TAP OUTS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stats-bottom-row">
+            <div class="card card-medium">
+              <span class="card-num">100</span>
+              <span class="card-label">NUMBER OF STUDENTS</span>
+            </div>
+            <div class="card card-medium">
+              <span class="card-num">100</span>
+              <span class="card-label">NUMBER OF VISITORS</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="ranking-container">
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td></td><td></td><td></td></tr>
+              <tr><td></td><td></td><td></td></tr>
+              <tr><td></td><td></td><td></td></tr>
+              <tr><td></td><td></td><td></td></tr>
+              <tr><td></td><td></td><td></td></tr>
+              <tr><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <button class="ai-tappy-btn" aria-label="AI Tappy Assistant">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          
+          <rect x="5" y="7" width="14" height="10" rx="3.5" stroke="#ffffff" stroke-width="2" fill="none"/>
+         
+          <path d="M12 4V7" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="12" cy="3" r="1.5" fill="#ffffff"/>
+          
+          <circle cx="9" cy="11" r="1.2" fill="#ffffff"/>
+          <circle cx="15" cy="11" r="1.2" fill="#ffffff"/>
+          
+          <path d="M9.5 14C10 14.8 11 15.2 12 15.2C13 15.2 14 14.8 14.5 14" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+          
+          <rect x="3" y="9.5" width="2" height="5" rx="1" fill="#ffffff"/>
+          <rect x="19" y="9.5" width="2" height="5" rx="1" fill="#ffffff"/>
+          <path d="M19 12C20.8 12 21.2 13 21.2 15C21.2 16.5 20.2 17 18.5 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </main>
+
+    <div id="aiTappyModal" class="ai-modal-container popout">
+      <div class="ai-chat-wrapper">
+        
+        <div class="ai-chat-header">
+          <h2 class="ai-title">ASK <strong>TAPPY</strong></h2>
+          
+          <div class="ai-header-controls">
+              <button id="aiToggleSizeBtn" class="ai-ctrl-btn" type="button" aria-label="Resize window" title="Toggle Fullscreen / Pop-out">
+                <svg class="resize-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </button>
+              
+              <button id="aiCloseBtn" class="ai-ctrl-btn ai-close-btn" type="button" aria-label="Close Assistant" title="Close">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+        </div>
+
+        <div class="ai-chat-box">
+        </div>
+
+        <div class="ai-input-row">
+          <div class="ai-input-bar">
+            <button class="ai-plus-btn" type="button" aria-label="Add Attachment">+</button>
+            <input type="text" placeholder="Ask Tappy anything..." class="ai-input-field" />
+            <button class="ai-mic-btn" type="button" aria-label="Voice Input">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+              </svg>
+            </button>
+          </div>
+      </div>
+    </div>
+
+
+    <button id="aiFloatingTrigger" class="ai-tappy-btn standalone-trigger" type="button" aria-label="Open AI Tappy">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="7" width="14" height="10" rx="3.5" stroke="#ffffff" stroke-width="2" fill="none"/>
+        <path d="M12 4V7" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="12" cy="3" r="1.5" fill="#ffffff"/>
+        <circle cx="9" cy="11" r="1.2" fill="#ffffff"/>
+        <circle cx="15" cy="11" r="1.2" fill="#ffffff"/>
+        <path d="M9.5 14C10 14.8 11 15.2 12 15.2C13 15.2 14 14.8 14.5 14" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+        <rect x="3" y="9.5" width="2" height="5" rx="1" fill="#ffffff"/>
+        <rect x="19" y="9.5" width="2" height="5" rx="1" fill="#ffffff"/>
+      </svg>
+    </button>
+
+    <button id="aiFloatingTrigger" class="ai-tappy-btn standalone-trigger" type="button" aria-label="Open AI Tappy">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="7" width="14" height="10" rx="3.5" stroke="#ffffff" stroke-width="2" fill="none"/>
+        <path d="M12 4V7" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="12" cy="3" r="1.5" fill="#ffffff"/>
+        <circle cx="9" cy="11" r="1.2" fill="#ffffff"/>
+        <circle cx="15" cy="11" r="1.2" fill="#ffffff"/>
+        <path d="M9.5 14C10 14.8 11 15.2 12 15.2C13 15.2 14 14.8 14.5 14" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+        <rect x="3" y="9.5" width="2" height="5" rx="1" fill="#ffffff"/>
+        <rect x="19" y="9.5" width="2" height="5" rx="1" fill="#ffffff"/>
+      </svg>
+    </button>
+  </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.querySelector('.hamburger-tab');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (hamburgerBtn && sidebar) {
+      const isExpanded = localStorage.getItem('sidebarState') === 'expanded';
+
+      if (isExpanded) {
+        sidebar.classList.add('expanded');
+        hamburgerBtn.classList.add('active');
+        document.body.classList.add('sidebar-expanded');
+      }
+
+      hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        sidebar.classList.toggle('expanded');
+        document.body.classList.toggle('sidebar-expanded');
+
+        if (sidebar.classList.contains('expanded')) {
+          localStorage.setItem('sidebarState', 'expanded');
+        } else {
+          localStorage.setItem('sidebarState', 'collapsed');
+        }
+      });
+    }
+  });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightBtn = document.getElementById('lightMode');
+    const darkBtn = document.getElementById('darkMode');
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      if (lightBtn && darkBtn) {
+        lightBtn.classList.remove('active');
+        darkBtn.classList.add('active');
+      }
+    }
+
+    if (lightBtn) {
+      lightBtn.addEventListener('click', () => {
+        document.body.classList.remove('dark-mode');
+        lightBtn.classList.add('active');
+        darkBtn.classList.remove('active');
+        localStorage.setItem('theme', 'light');
+      });
+    }
+
+    if (darkBtn) {
+      darkBtn.addEventListener('click', () => {
+        document.body.classList.add('dark-mode');
+        darkBtn.classList.add('active');
+        lightBtn.classList.remove('active');
+        localStorage.setItem('theme', 'dark');
+      });
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const aiTappyBtn = document.querySelector('.ai-tappy-btn');
+    const aiModal = document.getElementById('aiTappyModal');
+
+    if (aiTappyBtn && aiModal) {
+      aiTappyBtn.addEventListener('click', () => {
+        aiModal.classList.toggle('active');
+      });
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const aiModal = document.getElementById('aiTappyModal');
+    const floatingTrigger = document.getElementById('aiFloatingTrigger');
+    const innerLauncher = document.getElementById('aiTappyLauncher');
+    const closeBtn = document.getElementById('aiCloseBtn');
+    const toggleSizeBtn = document.getElementById('aiToggleSizeBtn');
+
+    function toggleAiModal() {
+      if (aiModal) {
+        aiModal.classList.toggle('active');
+      }
+    }
+
+    if (floatingTrigger) floatingTrigger.addEventListener('click', toggleAiModal);
+    if (closeBtn) closeBtn.addEventListener('click', () => aiModal.classList.remove('active'));
+
+    if (innerLauncher) {
+      innerLauncher.addEventListener('click', () => {
+        console.log('Tappy clicked inside input bar!');
+      });
+    }
+
+    if (toggleSizeBtn && aiModal) {
+      toggleSizeBtn.addEventListener('click', () => {
+        if (aiModal.classList.contains('popout')) {
+          aiModal.classList.remove('popout');
+          aiModal.classList.add('fullscreen');
+        } else {
+          aiModal.classList.remove('fullscreen');
+          aiModal.classList.add('popout');
+        }
+      });
+    }
+  });
+
+</script>      
+</body>
+</html>
