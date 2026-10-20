@@ -4,65 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TAPIN</title>
-  <link rel="stylesheet" href="design.css" />
+  <link rel="stylesheet" href="design.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
   <section class="page-section">
     <header class="admin-header">
-        <aside><img src="TAPIN Logo.png" style="height:100px; position:relative; margin-left: 10px;" alt="TAPIN Logo" class="tapin-logo-img" /></aside>
-          
-        <div class="theme-controls">
-          <button id="lightMode" class="theme-btn active">☼</button>
-          <button id="darkMode" class="theme-btn">☾</button>
-        </div>
-      </header>
-
-      <aside class="sidebar">
-        <button class="hamburger-tab" aria-label="Toggle menu">
-          <span class="hamburger">
-            <i></i><i></i><i></i>
-          </span>
-        </button>
+      <aside><img src="TAPIN Logo.png" style="height:100px; position:relative; margin-left: 10px;" alt="TAPIN Logo" class="tapin-logo-img" /></aside>
         
-        <nav class="side-nav">
-        <a class="side-link" href="admin dashboard.html">
-          <span class="ico">▦</span>
-          <span class="link-text">Dashboard</span>
-        </a>
-        <a class="side-link" href="attendance.html">
-          <span class="ico">▤</span>
-          <span class="link-text">Attendance Logs</span>
-        </a>
-        <a class="side-link active" href="studentrecords.html">
-          <span class="ico">▣</span>
-          <span class="link-text">Student Records</span>
-        </a>
-        <a class="side-link" href="visitorrecords.html">
-          <span class="ico">▧</span>
-          <span class="link-text">Visitor Records</span>
-        </a>
-        <a class="side-link" href="account.html">
-          <span class="ico">♙</span>
-          <span class="link-text">Account</span>
-        </a>
-        <a class="side-link" href="register.html">
-          <span class="ico">＋</span>
-          <span class="link-text">Register</span>
-        </a>
-        <a class="side-link" href="report.html">
-          <span class="ico">▥</span>
-          <span class="link-text">Report</span>
-        </a>
-        <a class="side-link" href="auditlogs.html">
-          <span class="ico">☷</span>
-          <span class="link-text">Audit Logs</span>
-        </a>
-        <a class="side-link side-logout" href="login.html">
-          <span class="ico">⇥</span>
-          <span class="link-text">Log out</span>
-        </a>
-        </nav>
-      </aside>
+      <div class="theme-controls">
+        <button id="lightMode" class="theme-btn active" aria-label="Light Mode">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button id="darkMode" class="theme-btn" aria-label="Dark Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <button class="hamburger-tab" aria-label="Toggle menu">
+        <span class="hamburger">
+          <i></i><i></i><i></i>
+        </span>
+      </button>
+      
+      <nav class="side-nav">
+      <a class="side-link" href="admin dashboard.html">
+        <span class="ico"><i class="fa-solid fa-table-cells-large"></i></span>
+        <span class="link-text">Dashboard</span>
+      </a>
+      <a class="side-link" href="attendance.html">
+        <span class="ico"><i class="fa-solid fa-clipboard-user"></i></span>
+        <span class="link-text">Attendance Logs</span>
+      </a>
+      <a class="side-link active" href="studentrecords.html">
+        <span class="ico"><i class="fa-solid fa-user-graduate"></i></span>
+        <span class="link-text">Student Records</span>
+      </a>
+      <a class="side-link" href="visitorrecords.html">
+        <span class="ico"><i class="fa-solid fa-address-book"></i></span>
+        <span class="link-text">Visitor Records</span>
+      </a>
+      <a class="side-link" href="account.html">
+        <span class="ico"><i class="fa-solid fa-circle-user"></i></span>
+        <span class="link-text">Account</span>
+      </a>
+      <a class="side-link" href="register.html">
+        <span class="ico"><i class="fa-solid fa-user-plus"></i></span>
+        <span class="link-text">Register</span>
+      </a>
+      <a class="side-link" href="report.html">
+        <span class="ico"><i class="fa-solid fa-chart-column"></i></span>
+        <span class="link-text">Report</span>
+      <a class="side-link side-logout" href="login.html">
+        <span class="ico"><i class="fa-solid fa-right-from-bracket"></i></span>
+        <span class="link-text">Log out</span>
+      </a>
+      </nav>
+    </aside>
 
     <section class="attendance-section">
 
@@ -77,10 +77,10 @@
           <table class="records-table">
             <thead>
               <tr>
-                <th>Date</th>
                 <th>Number</th>
-                <th>NFC #</th>
                 <th>Name</th>
+                <th>NFC Number</th>
+                <th>Date</th>
                 <th>Email</th>
                 <th>Time In</th>
                 <th>Time Out</th>
@@ -88,19 +88,19 @@
             </thead>
             <tbody>
               <tr>
-                <td>2026-10-02</td>
                 <td>101</td>
-                <td>NFC-99101</td>
                 <td>Juan Dela Cruz</td>
+                <td>NFC-99101</td>
+                <td>2026-10-02</td>
                 <td>juan.delacruz@student.edu.ph</td>
                 <td>07:30 AM</td>
                 <td>05:00 PM</td>
               </tr>
               <tr>
-                <td>2026-10-02</td>
                 <td>102</td>
-                <td>NFC-99102</td>
                 <td>Clara Reyes</td>
+                <td>NFC-99102</td>
+                <td>2026-10-02</td>
                 <td>clara.reyes@student.edu.ph</td>
                 <td>07:45 AM</td>
                 <td>04:15 PM</td>
