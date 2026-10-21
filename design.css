@@ -63,8 +63,8 @@ input{font:inherit;color:#222;outline:none}
 .left-link{display:block;margin:-7px 0 25px 12px}
 .primary-btn{display:block;border:0;border-radius:25px;background:var(--blue);color:#fff;height:40px;padding:0 34px;min-width:150px;margin:0 auto;cursor:pointer;font-size:13px;transition:background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;}
 .primary-btn:hover {background-color: #4d8ad0;}
-.switch-copy{font-size:10px;text-align:center;margin:8px 0 0}
-.switch-copy a{color:var(--blue);font-weight:700;margin-left:5px}
+.switch-copy{font-size:10px;text-align:center;margin-top:8px 0 0;}
+.switch-copy a{color:var(--blue);font-weight:700;}
 .switch-copy a:hover{color:#4d8ad0;}
 .auth-brand-panel{background:var(--navy);display:flex;align-items:center;justify-content:center;min-height:100vh;height:100%;width:100%;}
 .auth-brand-panel .tapin-logo.img { height:80px;}
@@ -1566,8 +1566,8 @@ body.sidebar-expanded .page-section {
   flex-direction: column;
   gap: 2px;
   font-size: 12px;
-  font-weight: 800;
-  color: #0f172a;
+  font-weight: 700;
+  color: #475569;
 }
 
 .form-actions {
